@@ -4,21 +4,21 @@
     "zadark": {
       "aarch64-linux": {
         "name": "Zalo-26.11.10+ZaDark-26.3-784f24f-aarch64.AppImage",
-        "hash": "sha256-K1xG0pNUy+MXK7LahmCZK5DsiGQjEvwEcb3PWqovQzw="
+        "hash": "sha256-2APmDI5hXf4C4125y1Xfjlh9HWHm8aHoXzVrvkoAC6U="
       },
       "x86_64-linux": {
         "name": "Zalo-26.11.10+ZaDark-26.3-784f24f-x86_64.AppImage",
-        "hash": "sha256-Tk0ySIFh2+p9YSiESqp/LotbqmjXolI0dnb5GOKSNkw="
+        "hash": "sha256-Cx9LwON5yz9/7JdreV86NS++5siniuYQnSIDgmc/j8M="
       }
     },
     "original": {
       "aarch64-linux": {
         "name": "Zalo-26.11.10-Original-784f24f-aarch64.AppImage",
-        "hash": "sha256-fZ8Bjt7LhU+ZnMs6HhvxyywJyIPJZk86PxlYOdzqYiU="
+        "hash": "sha256-gfcy49Q/UnoK6BsSnb2/2XxRXlRfuvQXi2rJauUR8rs="
       },
       "x86_64-linux": {
         "name": "Zalo-26.11.10-Original-784f24f-x86_64.AppImage",
-        "hash": "sha256-XM5O26+X5vrBbJjX082nqsn4JByMeKM3wZQ+R90zGCc="
+        "hash": "sha256-wXIdedWNObkdDiHU4PEeA7qTZslr1SErSkOa5IGw86Q="
       }
     }
   }
