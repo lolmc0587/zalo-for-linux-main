@@ -77,9 +77,16 @@
         "to": "zcall-native",
         "filter": [
           "**/*",
+          "!**/__pycache__/**"
+        ]
+      },
+      {
+        "from": "native/zlang",
+        "to": "native/zlang",
+        "filter": [
+          "**/*",
           "!**/__pycache__/**",
           "!**/*.pyc",
-          "!audio/**",
           "!**/*.rs",
           "!**/Cargo.toml",
           "!**/Cargo.lock",

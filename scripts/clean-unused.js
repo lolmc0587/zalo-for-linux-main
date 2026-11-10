@@ -18,7 +18,6 @@ const CLEAN_NATIVELiBS = [
   "os-sys-info/darwin_x64",
   "sqlite3/binding/napi-v6-darwin-arm64",
   "sqlite3/binding/napi-v6-darwin-x64",
-  "v8-profiles/profiler_electron1.8_mac.node",
   "zcall/zcall_mac.node",
   "zfile/win32",
   "zfile/win64",
@@ -30,6 +29,10 @@ const CLEAN_NATIVELiBS = [
   "zocr/darwin-x64",
   "zwalker/darwin-arm64",
   "zwalker/darwin-x64",
+  "zlang/darwin-arm64",
+  "zlang/darwin-x64",
+  "zlang/win32-ia32",
+  "zlang/win32-x64",
 ]
 
 // Linux-native addons always sit under a path containing "linux".
@@ -68,7 +71,7 @@ async function sweep(dir, { platformBinaries }) {
 }
 
 async function cleanZcallCrate() {
-  const binary = path.join(ZCALL_DIR, 'native-engine', 'zcall-audio');
+  // const binary = path.join(ZCALL_DIR, 'native-engine', 'zcall-audio');
   const crate = path.join(ZCALL_DIR, 'audio');
 
   if (!(await fs.pathExists(crate))) return 0;
@@ -96,15 +99,15 @@ async function main() {
     }
   }
 
-  const cleanedCrate = await cleanZcallCrate();
-  const cleanedBinaries = await sweep(APP_NATIVE_LIBS, { platformBinaries: true });
-  const cleanedSources = await sweep(APP_DIR, { platformBinaries: false })
-    + await sweep(path.join(ZCALL_DIR, 'native-engine'), { platformBinaries: false })
-    + await sweep(path.join(ZCALL_DIR, 'tools'), { platformBinaries: false });
-
-  if (cleanedCrate) logger.dim('Cleaned the zcall Rust crate source (native/engines/zcall/audio)');
-  if (cleanedBinaries) logger.dim(`Cleaned ${cleanedBinaries} non-Linux binar(ies)`);
-  if (cleanedSources) logger.dim(`Cleaned ${cleanedSources} build-only file(s)/dir(s)`);
+//   const cleanedCrate = await cleanZcallCrate();
+//   const cleanedBinaries = await sweep(APP_NATIVE_LIBS, { platformBinaries: true });
+//   const cleanedSources = await sweep(APP_DIR, { platformBinaries: false })
+//     + await sweep(path.join(ZCALL_DIR, 'native-engine'), { platformBinaries: false })
+//     + await sweep(path.join(ZCALL_DIR, 'tools'), { platformBinaries: false });
+//
+//   if (cleanedCrate) logger.dim('Cleaned the zcall Rust crate source (native/engines/zcall/audio)');
+//   if (cleanedBinaries) logger.dim(`Cleaned ${cleanedBinaries} non-Linux binar(ies)`);
+//   if (cleanedSources) logger.dim(`Cleaned ${cleanedSources} build-only file(s)/dir(s)`);
 }
 
 if (require.main === module) {
